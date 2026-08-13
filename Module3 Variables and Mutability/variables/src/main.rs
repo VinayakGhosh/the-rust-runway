@@ -34,6 +34,14 @@ fn main() {
 
     let _byte = [0,8];
 
+    let sum = sum_numbers(10,20);
+    println!("sum is {}", sum);
+
+}
 
 
+fn sum_numbers(x: i32, y: i32)-> i32{
+    println!("x is: {}", x);
+    println!("y is: {}", y);
+    return x+y;
 }

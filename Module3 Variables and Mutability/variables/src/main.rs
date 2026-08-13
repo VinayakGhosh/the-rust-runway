@@ -51,7 +51,25 @@ fn main() {
             break counter;
         }
     };
-    println!("result is: {}", result)
+
+    println!("result is: {}", result);
+
+    // while loop
+    while counter<8{
+        counter +=1;
+        print!("-> {} ", counter)
+    }
+    println!();
+
+    // for loop or for in loop
+    let a = [10, 20, 30, 40, 50];
+    for element in a.iter() {
+        print!("-> {element} ");
+    }
+    println!();
+    for number in 1..3{
+        print!("-> {number}");
+    }
 
 }
 

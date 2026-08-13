@@ -23,7 +23,7 @@ fn main() {
     let tup = ("Let's get rusty!", 100_100);   //tuple
     // two ways to get value out of tuple:
     // 1) destructuring
-    let(channel, subcount) = tup;
+    let(_channel, _subcount) = tup;
 
     // 2) dot notation
     let _sub_count = tup.1;
@@ -41,7 +41,17 @@ fn main() {
     // control flow
     let condition = true;
     let number = if condition {5} else {6};
-    print!("number: {}", number)
+    println!("number: {}", number);
+
+    // Return values from loop
+    let mut counter = 0;
+    let result = loop{
+        counter += 1;
+        if counter ==5{
+            break counter;
+        }
+    };
+    println!("result is: {}", result)
 
 }
 

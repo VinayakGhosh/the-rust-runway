@@ -14,6 +14,26 @@ fn main() {
 
 
     const SUBSCRIBE_COUNT: u32 = 100000;
-    println!("SUBSCRIBE_COUNT is: {}", SUBSCRIBE_COUNT)
+    println!("SUBSCRIBE_COUNT is: {}", SUBSCRIBE_COUNT);
+
+
+    // Compound types
+
+    // Tuple
+    let tup = ("Let's get rusty!", 100_100);   //tuple
+    // two ways to get value out of tuple:
+    // 1) destructuring
+    let(channel, subcount) = tup;
+
+    // 2) dot notation
+    let _sub_count = tup.1;
+
+    // Array
+    let error_codes = [200, 404, 500];
+    let _not_found = error_codes[1];
+
+    let _byte = [0,8];
+
+
 
 }

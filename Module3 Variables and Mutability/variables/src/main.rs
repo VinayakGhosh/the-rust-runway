@@ -37,6 +37,12 @@ fn main() {
     let sum = sum_numbers(10,20);
     println!("sum is {}", sum);
 
+
+    // control flow
+    let condition = true;
+    let number = if condition {5} else {6};
+    print!("number: {}", number)
+
 }
 
 

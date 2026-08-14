@@ -1,5 +1,5 @@
 fn main() {
-    // -----------Ownership Rules------------
+    //A) -----------Ownership Rules------------
     // 1) Each value in Rust has a variable that's called it's owner.
     // 2) There can only be one owner at a time.
     // 3) When the owner goes out of scope, the value will be dropped.
@@ -20,7 +20,7 @@ fn main() {
 
 
 
-    // -----------How variables and data interact-----------------
+    //B) -----------How variables and data interact-----------------
     let x = 5;
     let y = x;      // copying value
 
@@ -30,4 +30,43 @@ fn main() {
     let s2 = s1;    // Move (not shallow copy)
 
     println!("s1 is: {}", s1);  //this line would give error as s1 is not valid anymore 
+
+
+
+    //c) ---------------Ownership and Function-----------------------
+    // here because s is string so it get's moved
+    let s = String::from("hello");
+    takes_ownership(s);
+    println!("{s}");
+
+    // Here as x is integer it get's copied
+    let x = 5;
+    makes_copy(x);
+    println!("{x}");
+
+    // Example of gives ownership
+    let str = gives_ownership();
+    println!("str is: {}", str);
+
+    // Example of take ownership and give back
+    let s2 = String::from("take and give");
+    let s3 = takes_and_give_back(s2);
+    println!("s3 is {}", s3);
+}
+
+fn takes_ownership(some_string: String){
+    println!("{}", some_string);
+}
+
+fn makes_copy(some_integer: u32){
+    println!("some_integer {}", some_integer);
+}
+
+fn gives_ownership() -> String {
+    let s = String::from("Hello");
+    s
+}
+
+fn takes_and_give_back(some_string: String)->String {
+    some_string
 }

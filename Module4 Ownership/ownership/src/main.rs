@@ -25,6 +25,8 @@ fn main() {
     let y = x;      // copying value
 
     let s1 = String::from("hello");
+    // but to actually clone s1 into s3 we can do:
+    let s3 = s1.clone();
     let s2 = s1;    // Move (not shallow copy)
 
     println!("s1 is: {}", s1);  //this line would give error as s1 is not valid anymore 

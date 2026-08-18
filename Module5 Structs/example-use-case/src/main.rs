@@ -6,14 +6,22 @@ struct Rectange{
     height: u32,
 }
 
-// method syntax
+
 impl Rectange{
+    // method syntax, it get's passed self
     fn area(&self) ->u32{
         self.width * self.height
     }
 
     fn can_hold(&self, other: &Rectange) -> bool{
         self.width > other.width && self.height>other.height
+    }
+}
+
+impl Rectange{
+    // associated function, no self passing here
+    fn square(size: u32)-> Rectange{
+        Rectange { width: size, height: size }
     }
 }
 
@@ -27,6 +35,9 @@ fn main() {
         width:20,
         height:10
     };
+
+    // associated function calling here
+    let _rect3 = Rectange::square(25);
 
     // println!("The area of the rectangle is {} square pixels.", area(&rect));
 

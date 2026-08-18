@@ -28,8 +28,14 @@ fn main() {
     let _user3 = User{
         email: String::from("madhav@gmail.com"),
         username: String::from("madhok"),
-        ..user2
+        ..user2                
     };
+
+
+
+    // Tuple Structs
+    struct Color(i32, i32, i32);
+    struct Point(i32, i32, i32);
 
 }
 

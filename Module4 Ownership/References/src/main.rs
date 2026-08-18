@@ -17,6 +17,13 @@ fn main() {
     // if you want to pass mutable referenes
     let mut s1 = String::from("Hello");
     change(& mut s1)
+
+
+    // Slices are a kind of reference that allows you to reference a contiguous sequence of elements in a collection rather than the whole collection. Slices let you work with a section of a collection rather than the whole collection. 
+
+    let mut s = String::from("Hello world");
+    let hello = &s[0..5];     // here 5 is exclusive
+    let world = &s[6..11];    // here 11 is exclusive
 }
 
 fn calculate_length(s: &String)->usize{         // references are immutable by default
@@ -28,3 +35,5 @@ fn change(s: & mut String){
     s.push_str(", world");
     println!("s is {}", s)
 }
+
+

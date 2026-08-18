@@ -15,7 +15,7 @@ fn main() {
         active: true,
         sign_in_count:1
     };
-    let name = user1.username;
+    let _name = user1.username;
     user1.username = String::from("newace2025");
 
 
@@ -23,6 +23,13 @@ fn main() {
         String::from("rajkshamani@gmail.com"), 
         String::from("rajshamii")
     );
+
+    // Reusing instance data
+    let _user3 = User{
+        email: String::from("madhav@gmail.com"),
+        username: String::from("madhok"),
+        ..user2
+    };
 
 }
 
